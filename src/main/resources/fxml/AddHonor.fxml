@@ -1,0 +1,40 @@
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddHonorController" prefHeight="645.0" prefWidth="900.0">
+    <!-- Set background image -->
+    <ImageView fitHeight="645.0" fitWidth="900.0" >
+        <Image url="@/backgrounds/AddHonor.png"/>
+    </ImageView>
+
+    <Text fill="BLACK" layoutX="260.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="5.0" text="Add New Honor" fontSmoothingType="GRAY" wrappingWidth="474.6638224304445" style="-fx-font-weight: bold; -fx-font-size: 50px; -fx-font-family: 'Arial Rounded MT Bold'">
+
+    </Text>
+    <Button fx:id="exitButton" text="Exit" alignment="CENTER" layoutX="800.0" layoutY="10.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="40.0" prefWidth="80.0"  style="-fx-font-weight: bold; -fx-font-family: 'Arial Rounded MT Bold'" textFill="WHITE">
+       <stylesheets>
+           <URL value="@/css/ButtonCss.css"></URL>
+       </stylesheets>
+    </Button>
+
+    <Rectangle x="150" y="150" width="600" height="400" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+
+    <TextField fx:id="nameField" layoutX="225.0" layoutY="190.0" prefHeight="40.0" prefWidth="450.0" promptText="Name" />
+    <TextField fx:id="infoField" layoutX="225.0" layoutY="243.0" prefHeight="40.0" prefWidth="450.0" promptText="Info" />
+    <TextField fx:id="picPathField" layoutX="225.0" layoutY="296.0" prefHeight="40.0" prefWidth="450.0" promptText="Picture Path" />
+    <ComboBox fx:id="typeField" layoutX="225.0" layoutY="350.0" prefHeight="40.0" prefWidth="450.0" promptText="Type" />
+    <DatePicker fx:id="dateField" layoutX="225.0" layoutY="403.0" prefHeight="40.0" prefWidth="450.0" promptText="Date" />
+
+    <Button fx:id="addButton" alignment="CENTER" layoutX="410.0" layoutY="470.0" mnemonicParsing="false" onAction="#onAddButtonClicked" prefHeight="40.0" prefWidth="80.0" style="-fx-font-weight: bold; -fx-font-family: 'Arial Rounded MT Bold'" text="Add" textFill="WHITE">
+        <stylesheets>
+            <URL value="@/css/ButtonCss.css"></URL>
+        </stylesheets>
+    </Button>
+</AnchorPane>

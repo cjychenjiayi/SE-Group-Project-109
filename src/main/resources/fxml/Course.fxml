@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:controller="controller.CoursesController"
+            xmlns:fx="http://javafx.com/fxml" prefHeight="645.0" prefWidth="900.0">
+
+    <GridPane alignment="center" styleClass="GridPane" stylesheets="@../css/CSS.css" prefHeight="645.0" prefWidth="900.0">
+        <columnConstraints >
+            <ColumnConstraints percentWidth="15"/>
+            <ColumnConstraints percentWidth="85"/>
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints percentHeight="12.5"/>
+            <RowConstraints percentHeight="12.5"/>
+            <RowConstraints percentHeight="75"/>
+        </rowConstraints>
+
+        <children>
+        <GridPane styleClass="GridPane2" GridPane.columnIndex="0" GridPane.rowSpan = "3" >
+<!--            <ImageView fitHeight="645.0" fitWidth="900.0">-->
+<!--                <Image url="@/backgrounds/Login.png"/>-->
+<!--            </ImageView>-->
+
+        </GridPane></children>
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="0"  alignment="center" style="-fx-background-color: #FFFFFF; -fx-spacing: 170; -fx-background-radius: 5PX; -fx-border-color: grey;">
+            <Button text="Mark" onAction="#MarkAction"  prefHeight="50.0" prefWidth="140.0" style="-fx-background-radius: 5PX; -fx-border-color: #AAAAAA; -fx-background-color: white; -fx-border-radius: 20; -fx-font-weight: bold;-fx-font-size: 20px"  textFill="BLACK"/>
+            <Button text="Insert" onAction="#InsertAction"  prefHeight="50.0" prefWidth="140.0" style="-fx-background-radius: 5PX; -fx-border-color: #AAAAAA; -fx-background-color: white; -fx-border-radius: 20; -fx-font-weight: bold;-fx-font-size: 20px"  textFill="BLACK" />
+        </HBox>
+
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="center" style="-fx-background-color: #FFFFFF; -fx-spacing: 50; -fx-border-color: grey;">
+            <Text fx:id="typeText" text="Course type:"  style="-fx-font-size: 24;-fx-font-family: 'Arial';-fx-fill: black;-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 0,0,0,1 );">
+            </Text>
+            <ChoiceBox fx:id="typeChoiceBox" prefWidth="150.0" onAction="#handleTypeChoiceBoxAction" style="-fx-font-size: 18;-fx-font-family: 'Arial';-fx-background-color: #ffffff;-fx-border-color: #000000;">
+            </ChoiceBox>
+
+            <Text fx:id="semesterText" text="Semester:" style="-fx-font-size: 24;-fx-font-family: 'Arial';-fx-fill: black;-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 0,0,0,1 );"></Text>
+            <ChoiceBox fx:id="semesterChoiceBox" prefWidth="150.0" onAction="#handleSemesterChoiceBoxAction" style="-fx-font-size: 18;-fx-font-family: 'Arial';-fx-background-color: #ffffff;-fx-border-color: #000000;"/>
+        </HBox>
+
+        <TableView  editable="true"   fx:id="table"  GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <stylesheets>
+                <URL value="@../css/CourseTable.css" />
+            </stylesheets>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </GridPane>
+
+
+    <Button fx:id="ToCourse" alignment="BOTTOM_CENTER" layoutX="10" layoutY="70" mnemonicParsing="false"  prefHeight="80" prefWidth="115" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/course.purple.png"/>
+                </ImageView>
+                <Label text="Course" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold; -fx-text-fill: #591bb7">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToExperience" alignment="BOTTOM_CENTER" layoutX="10" layoutY="160" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goExperience" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/experience.png"/>
+                </ImageView>
+                <Label text="Experience" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToHonor" alignment="BOTTOM_CENTER" layoutX="10" layoutY="250" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goHonor" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/Portofolio.png"/>
+                </ImageView>
+                <Label text="Portofolio" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToUser" alignment="BOTTOM_CENTER" layoutX="10" layoutY="340" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goUser" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+            <ImageView fitHeight="40" fitWidth="40" >
+                <Image url="@/backgrounds/tags/me.png"/>
+            </ImageView>
+            <Label text="Me" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+            </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+</AnchorPane>

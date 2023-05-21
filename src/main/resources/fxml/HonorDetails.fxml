@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.scene.layout.HBox?>
+<HBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/" fx:controller="controller.HonorDetailsController" prefHeight="500" prefWidth="500" style="">
+
+    <ImageView fx:id="honorImage" fitHeight="400" fitWidth="400" layoutY="100" layoutX="100" style="-fx-border-radius: 10px" />
+
+    <VBox>
+        <Label fx:id="honorName" style="-fx-font-size: 30; -fx-font-weight: bold;" />
+        <Label fx:id="honorInfo" style="-fx-font-size: 20;" />
+    </VBox>
+</HBox>
+

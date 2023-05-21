@@ -1,0 +1,12 @@
+.vbox {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-padding: 10px;
+}
+
+.label {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+}
+

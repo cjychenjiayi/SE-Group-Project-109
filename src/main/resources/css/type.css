@@ -1,0 +1,44 @@
+.JFXbutton{
+    /*-fx-border-color: transparent;*/
+    opacity: 0.5;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #828282;
+}
+
+.button:focus {
+    -fx-border-color: transparent, black;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#Button {
+    -fx-background-color: white; // 设置按钮的背景颜色为白色
+-fx-background-radius: 10; // 设置按钮的圆角半径为10像素
+}
+
+.GridPane {
+    -fx-background-color: white; // 设置网格面板的背景颜色为白色
+}
+
+.VBox {
+    -fx-background-color: brown; // 设置侧边栏的颜色为棕色
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+    -fx-background-color: purple; // 设置滚动条的颜色为紫色
+}
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+    -fx-background-color: transparent; // 设置滚动条的轨道为透明
+}

@@ -1,0 +1,17 @@
+#Button {
+  -fx-background-color: white;
+  -fx-background-radius: 10;
+}
+
+
+.VBox {
+  -fx-background-color: brown;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+  -fx-background-color: #CDC9C9;
+}
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+  -fx-background-color: transparent;
+}

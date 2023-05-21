@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.BoxBlur?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ModifyUserController" >
+
+    <ImageView fitHeight="645.0" fitWidth="900.0">
+        <Image url="@/backgrounds/ModifyUser.png"/>
+        <effect>
+            <BoxBlur iterations="2" />
+        </effect>
+    </ImageView>
+
+    <Rectangle x="150" y="50" width="600" height="550" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+
+
+    <GridPane alignment="center" hgap="10" vgap="10" layoutX="150" layoutY="50" prefWidth="600" prefHeight="550" stylesheets="@../css/CSS.css">
+        <padding>
+            <Insets top="25" right="25" bottom="10" left="25"/>
+        </padding>
+        <!--        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>-->
+
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" prefHeight="50.0">
+            <font>
+                <Font size="15.0" name="Microsoft Sans Serif"  />
+            </font>
+        </Label>
+
+        <Label fx:id="username" alignment="center" text="Hello" GridPane.columnIndex="1" GridPane.rowIndex="0" prefHeight="50.0" prefWidth="400.0">
+            <font>
+                <Font size="15.0" name="Microsoft Sans Serif"  />
+            </font>
+        </Label>
+
+        <Label text="User ID:" GridPane.columnIndex="0" GridPane.rowIndex="1" prefHeight="50.0">
+            <font>
+                <Font size="15.0" name="Microsoft Sans Serif"  />
+            </font>
+        </Label>
+
+        <Label fx:id="uid" alignment="center" text="Hello" GridPane.columnIndex="1" GridPane.rowIndex="1" prefHeight="50.0" prefWidth="400.0">
+            <font>
+                <Font size="15.0" name="Microsoft Sans Serif"  />
+            </font>
+        </Label>
+
+<!--        <TextField fx:id="usernameField" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" prefHeight="50.0" prefWidth="450.0" promptText="Username" />-->
+        <!--        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>-->
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2" prefHeight="50.0" prefWidth="450.0" promptText="Password" />
+        <!--        <Label text="Confirm:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>-->
+        <PasswordField fx:id="confirmField" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2" prefHeight="50.0" prefWidth="450.0" promptText="Confirm Password" />
+        <!--        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>-->
+        <TextField fx:id="nameField" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2" prefHeight="50.0" prefWidth="450.0" promptText="Name" />
+        <!--        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>-->
+        <TextField fx:id="emailField" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2" prefHeight="50.0" prefWidth="450.0" promptText="Email" />
+        <!--        <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>-->
+        <TextField fx:id="phoneField" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2" prefHeight="50.0" prefWidth="450.0" promptText="Phone" />
+
+
+        <Label text="Gender:" GridPane.columnIndex="0" GridPane.rowIndex="7">
+            <font>
+                <Font size="15.0" name="Microsoft Sans Serif"  />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="genderChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="7" prefHeight="50.0" prefWidth="400.0" style="-fx-font-family: 'Arial';-fx-background-color: #ffffff;-fx-border-color: orange;"/>
+
+        <Label text="Portrait:" GridPane.columnIndex="0" GridPane.rowIndex="8">
+            <font>
+                <Font size="15.0" name="Microsoft Sans Serif"  />
+            </font>
+        </Label>
+
+        <ChoiceBox fx:id="portraitChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="8" prefHeight="50.0" prefWidth="400.0" style="-fx-font-family: 'Arial';-fx-background-color: #ffffff;-fx-border-color: orange;"/>
+
+        <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.columnSpan="2" style="-fx-spacing: 40;" >
+
+            <Button fx:id="returnButton" alignment="CENTER" layoutX="460.0" layoutY="435.0"
+                    mnemonicParsing="false" onAction="#returnMe" prefHeight="40.0" prefWidth="80.0" text="Return" textFill="WHITE">
+                <stylesheets>
+                    <URL value="@../css/ButtonCss.css"/>
+                </stylesheets>
+            </Button>
+
+            <Button fx:id="modifyButton" alignment="CENTER" layoutX="460.0" layoutY="435.0"
+                    mnemonicParsing="false" onAction="#modify" prefHeight="40.0" prefWidth="80.0" text="Modify" textFill="WHITE">
+                <stylesheets>
+                    <URL value="@../css/ButtonCss.css"/>
+                </stylesheets>
+            </Button>
+        </HBox>
+
+
+    </GridPane>
+
+</AnchorPane>

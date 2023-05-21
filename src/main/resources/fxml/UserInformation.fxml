@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.UserInformationController" prefHeight="645.0" prefWidth="900.0">
+    <ImageView fitHeight="645.0" fitWidth="900.0" >
+        <image>
+            <Image url="@/backgrounds/UserInformation.png"/>
+        </image>
+        <effect>
+            <BoxBlur iterations="3" />
+        </effect>
+        <fitWidth>645</fitWidth>
+        <fitHeight>900</fitHeight>
+    </ImageView>
+
+    <StackPane layoutX="450" layoutY="30">
+        <ImageView fx:id="portrait" fitWidth="120" fitHeight="120" >
+        </ImageView>
+        <clip>
+            <Circle radius="60" centerX="60" centerY="60" />
+        </clip>
+    </StackPane>
+
+    <HBox layoutX="135.0" layoutY="170.0" prefWidth="765" alignment="CENTER">
+        <Text fx:id="encourage" textAlignment="CENTER" strokeType="OUTSIDE" strokeWidth="5.0"  fontSmoothingType="GRAY" style="-fx-font-size: 22; -fx-font-family: 'Arial'; -fx-fill: white; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 0,0,0,1 );">
+        </Text>
+    </HBox>
+
+
+    <Rectangle x="250" y="230" width="500" height="60" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+    <Rectangle x="250" y="330" width="500" height="60" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+    <Rectangle x="250" y="430" width="500" height="60" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+    <Rectangle x="250" y="530" width="500" height="60" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+
+    <Text fx:id = "name" layoutX="350.0" layoutY="265"  style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-size: 25"></Text>
+    <Text fx:id = "phone" layoutX="350.0" layoutY="365" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-size: 25" ></Text>
+    <Text fx:id = "email" layoutX="350.0" layoutY="465"  style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-size: 25"></Text>
+    <Text fx:id = "gender" layoutX="350.0" layoutY="565" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-size: 25" ></Text>
+
+    <VBox layoutX="0" layoutY="0" prefWidth="135" prefHeight="645" style="-fx-background-color: #f4f4f4">
+    </VBox>
+
+    <Button fx:id="ToCourse" alignment="BOTTOM_CENTER" layoutX="10" layoutY="70" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goCourse" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/course.png"/>
+                </ImageView>
+                <Label text="Course" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToExperience" alignment="BOTTOM_CENTER" layoutX="10" layoutY="160" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goExperience" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/experience.png"/>
+                </ImageView>
+                <Label text="Experience" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToHonor" alignment="BOTTOM_CENTER" layoutX="10" layoutY="250" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goHonor" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/Portofolio.png"/>
+                </ImageView>
+                <Label text="Portofolio" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToUser" alignment="BOTTOM_CENTER" layoutX="10" layoutY="340" mnemonicParsing="false"  prefHeight="80" prefWidth="115" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/me.purple.png"/>
+                </ImageView>
+                <Label text="Me" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold; -fx-text-fill: #591bb7">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="Logout" alignment="CENTER" layoutX="750.0" layoutY="30.0" mnemonicParsing="false" onAction="#setLogout" prefHeight="40.0" prefWidth="100.0" text="Logout" textFill="WHITE" style="-fx-font-weight: bold; -fx-font-family: 'Arial Rounded MT Bold'">
+        <stylesheets>
+            <URL value="@../css/ButtonCss.css"/>
+        </stylesheets>
+    </Button>
+
+    <Button fx:id="Modify" alignment="CENTER" layoutX="750.0" layoutY="100.0" mnemonicParsing="false" onAction="#modify" prefHeight="40.0" prefWidth="100.0" text="Modify" textFill="WHITE" style="-fx-font-weight: bold; -fx-font-family: 'Arial Rounded MT Bold'">
+        <stylesheets>
+            <URL value="@../css/ButtonCss.css"/>
+        </stylesheets>
+    </Button>
+</AnchorPane>

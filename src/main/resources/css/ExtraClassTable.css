@@ -1,0 +1,30 @@
+
+
+.table-view .column-header-background {
+    -fx-background-color: #f5eeff;
+
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+    -fx-font-size: 12pt;
+    -fx-background-color:#f5eeff;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-text-fill: darkgrey;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: orange;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: orange;;
+}
+#Button {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}

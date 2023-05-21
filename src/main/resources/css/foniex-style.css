@@ -1,0 +1,6 @@
+.button-raised {
+    -jfx-button-type: RAISED;
+    -fx-background-color: rgb(0, 139, 139);
+    -fx-text-fill: WHITE;
+
+}

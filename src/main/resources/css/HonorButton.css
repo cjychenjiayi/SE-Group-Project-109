@@ -1,0 +1,29 @@
+.button{
+    -fx-text-fill: black;
+    -fx-font-size: 11pt;
+    -fx-background-color: white;
+    -fx-background-radius: 30px;
+}
+
+.button:hover {
+    -fx-background-color: #ffb200;
+}
+
+.button:pressed {
+    -fx-background-color: orangered;
+}
+
+.toggle-button{
+    -fx-text-fill: black;
+    -fx-font-size: 11pt;
+    -fx-background-color: white;
+    -fx-background-radius: 30px;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #ffb200;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: orangered;
+}

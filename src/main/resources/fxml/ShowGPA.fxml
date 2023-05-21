@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ShowGPAController" prefHeight="645.0" prefWidth="900.0">
+    <!-- 设置背景图片 -->
+    <ImageView fitHeight="645.0" fitWidth="900.0">
+        <image>
+            <Image url="@/backgrounds/ShowGPA.png"/>
+        </image>
+    </ImageView>
+
+    <!-- 设置右上角的退出按钮 -->
+<!--    <Button fx:id="exitButton" text="Exit" layoutX="880.0" layoutY="10.0" alignment="CENTER_RIGHT" onAction="#exitButtonAction"/>-->
+
+    <Button fx:id="exitButton" text="Exit" alignment="CENTER"  layoutX="800.0" layoutY="10.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 5PX; -fx-background-color: #CC3A63; -fx-border-color: white;" textFill="WHITE">
+        <font>
+            <Font name="Microsoft Sans Serif" size="13.0" />
+        </font>
+    </Button>
+
+
+    <Rectangle x="100" y="100" width="700" height="500" fill="White" opacity="0.5" arcWidth="50" arcHeight="50" />
+
+    <Rectangle x="150" y="110" width="600" height="150" fill="White" opacity="0.9" arcWidth="50" arcHeight="50" />
+
+    <Rectangle x="150" y="270" width="600" height="320" fill="White" opacity="0.9" arcWidth="50" arcHeight="50" />
+
+<!--    width="600" height="400" fill="White" arcWidth="50" arcHeight="50"-->
+
+
+
+
+    <!-- 设置中间的白色透明圆角矩形框 -->
+<!--    <VBox fx:id="box" layoutX="150.0" layoutY="150.0" prefHeight="400.0" prefWidth="600.0"-->
+<!--          alignment="CENTER">-->
+<!--        <style>-->
+<!--            -fx-background-color: rgba(255, 255, 255, 0); /* 设置背景颜色为透明 */-->
+<!--            -fx-background-radius: 50.0; /* 设置圆角半径为50像素 */-->
+<!--&lt;!&ndash;            -fx-padding: 10.0; /* 设置内边距为10像素 */&ndash;&gt;-->
+<!--        </style>-->
+<!--        &lt;!&ndash;        <Text text="Add the course" layoutX="100" layoutY="100" fill="blue" font="Arial 20"/>&ndash;&gt;-->
+<!--        &lt;!&ndash; 在圆角矩形框中添加多个文本框 &ndash;&gt;-->
+
+    <GridPane alignment="center" styleClass="GridPane" layoutX="160.0" layoutY="120.0" prefHeight="130.0" prefWidth="560.0" >
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="60"/>
+            <ColumnConstraints percentWidth="40"/>
+        </columnConstraints>
+        <!-- 右侧上侧10%的部分 -->
+        <rowConstraints>
+            <RowConstraints percentHeight="25"/>
+            <RowConstraints percentHeight="25"/>
+            <RowConstraints percentHeight="25"/>
+            <RowConstraints percentHeight="25"/>
+        </rowConstraints>
+
+        <Text fx:id="gpa_name_text" text="GPA:" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-family: 'Microsoft Sans Serif'; -fx-font-size: 14px; -fx-font-weight: bold;"  >
+
+        </Text>
+        <Text fx:id="credit_name_text" text="Credits:" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-font-weight: bold;" >
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="avg_score_name_text" text="Average Score:" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-font-weight: bold;" >
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="degree_name_text" text="Degree Classification:" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-font-weight: bold;" >
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+
+
+
+        <Text fx:id="gpa_text" text="4.0/4.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="credit_text" text="76" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="avg_score_text" text="100" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="degree_text" text="First Class" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <font>
+                <Font name="Microsoft Sans Serif" size="14.0" />
+            </font>
+        </Text>
+
+    </GridPane>
+
+<!--    <VBox fx:id="gpa_detail" layoutX="150.0" layoutY="110.0" prefHeight="150.0" prefWidth="600.0"-->
+<!--          spacing="20.0" alignment="CENTER">-->
+
+
+<!--    </VBox>-->
+
+
+    <VBox fx:id="box_inside_diagram" layoutX="150.0" layoutY="270.0" prefHeight="320.0" prefWidth="600.0"
+          spacing="20.0" alignment="CENTER">
+
+        <LineChart fx:id="lineChart" layoutX="170.0" layoutY="275.0" prefHeight="310.0" prefWidth="540.0">
+            <xAxis>
+                <CategoryAxis fx:id="xAxis" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="numberYAxis" side="LEFT" />
+            </yAxis>
+        </LineChart>
+<!--        </VBox>-->
+
+
+
+        <!-- 在圆角矩形框中添加一个保存按钮 -->
+<!--        <Button fx:id="saveButton" text="Save" style="-fx-border-color: #AAAAAA;  -fx-background-color: white; -fx-border-radius: 2;"  textFill="BLACK" alignment="BOTTOM_CENTER"/>-->
+    </VBox>
+</AnchorPane>

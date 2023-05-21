@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import java.net.URL?>
+<AnchorPane fx:controller="controller.HonorsController"
+            xmlns:fx="http://javafx.com/fxml" prefHeight="645.0" prefWidth="900.0">
+
+    <ImageView fitHeight="645.0" fitWidth="900.0" >
+        <image>
+            <Image url="@/backgrounds/Honor.png"/>
+        </image>
+        <fitWidth>645</fitWidth>
+        <fitHeight>900</fitHeight>
+    </ImageView>
+
+    <GridPane alignment="center" styleClass="GridPane" stylesheets="@../css/CSS.css" prefHeight="645.0" prefWidth="900.0">
+        <columnConstraints >
+            <ColumnConstraints percentWidth="15"/>
+            <ColumnConstraints percentWidth="85"/>
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints percentHeight="22"/>
+            <RowConstraints percentHeight="78"/>
+        </rowConstraints>
+
+
+        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="0" style=" -fx-spacing: 20; -fx-background-radius: 5PX; -fx-border-color: #FFDBDBDB;">
+
+            <TextField fx:id="searchField" layoutX="20" layoutY="25" prefWidth="310.0" prefHeight="40" promptText="Enter keywords" />
+            <Button fx:id="searchButton" layoutX="350.0" layoutY="30.0" text="Search" style="-fx-background-color: #ff99ff" />
+
+            <GridPane layoutX="460.0" layoutY="5.0" hgap="10" vgap="20">
+                <ToggleButton fx:id="classFilter" GridPane.columnIndex="0" GridPane.rowIndex="1" text="CLASS" />
+                <ToggleButton fx:id="competitionFilter" GridPane.columnIndex="2" GridPane.rowIndex="1" text="COMPETITION" />
+                <ToggleButton fx:id="videoFilter" GridPane.columnIndex="0" GridPane.rowIndex="2" text="VIDEO" />
+                <ToggleButton fx:id="examFilter" GridPane.columnIndex="1" GridPane.rowIndex="1" text="EXAM" />
+                <ToggleButton fx:id="dailyFilter" GridPane.columnIndex="1" GridPane.rowIndex="2" text="DAILY" />
+                <Button fx:id="insertButton" GridPane.columnIndex="2" GridPane.rowIndex="2" text="Insert" onAction="#onAddButtonClicked"/>
+                <stylesheets>
+                    <URL value="@/css/HonorButton.css"></URL>
+                </stylesheets>
+            </GridPane>
+
+            <stylesheets>
+                <URL value="@/css/HonorButton.css"></URL>
+            </stylesheets>
+        </AnchorPane>
+
+        <ListView fx:id="listView"  GridPane.columnIndex="1" GridPane.rowIndex="1" onMouseClicked="#onListViewClicked"/>
+
+    </GridPane>
+
+    <VBox layoutX="0" layoutY="0" prefWidth="135" prefHeight="645" style="-fx-background-color: #f4f4f4">
+    </VBox>
+
+    <Button fx:id="ToCourse" alignment="BOTTOM_CENTER" layoutX="10" layoutY="70" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goCourse" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/course.png"/>
+                </ImageView>
+                <Label text="Course" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToExperience" alignment="BOTTOM_CENTER" layoutX="10" layoutY="160" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goExperience" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/experience.png"/>
+                </ImageView>
+                <Label text="Experience" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToHonor" alignment="BOTTOM_CENTER" layoutX="10" layoutY="250" mnemonicParsing="false"  prefHeight="80" prefWidth="115" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/Portfolio.purple.png"/>
+                </ImageView>
+                <Label text="Portofolio" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold;-fx-text-fill: #591bb7">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+    <Button fx:id="ToUser" alignment="BOTTOM_CENTER" layoutX="10" layoutY="340" mnemonicParsing="false"  prefHeight="80" prefWidth="115" onAction="#goUser" style="-fx-background-color: white">
+        <graphic>
+            <VBox alignment="center" spacing="5" >
+                <ImageView fitHeight="40" fitWidth="40" >
+                    <Image url="@/backgrounds/tags/me.png"/>
+                </ImageView>
+                <Label text="Me" alignment="BOTTOM_CENTER" style="-fx-font-family: 'Arial Rounded MT Bold';-fx-font-weight: bold;">
+                </Label>
+            </VBox>
+        </graphic>
+    </Button>
+
+</AnchorPane>
+
+
